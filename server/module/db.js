@@ -31,7 +31,7 @@ module.exports = class DB {
                     // ha itt elkapom a hibát, akkor a getHandler-ben is 
                     // le kell kezelni
                 );
-            }  else {
+            } else {
                 // az else ág akkor fut le, ha nincs id
                 this.getJsonArray().then(
                     dataArray => {
@@ -53,7 +53,7 @@ module.exports = class DB {
                     return reject(err);
                     // ha az err nem 0, a return miatt nem megy tovább, 
                     // a reject jelzi, hogy nem sikerült a beolvasás
-                } 
+                }
                 // else {
                 //     // az else ág akkor fut le, ha nincs id
                 //     this.getJsonArray().then(
