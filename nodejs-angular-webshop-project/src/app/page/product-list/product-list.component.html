@@ -1,9 +1,13 @@
+<!-- <pre>
+    {{ list$ | async | json }}
+  </pre> -->
+
 <div class="container">
     <h1 class="text-center">Guitars of your choice</h1>
     <br>
-    <a href="#" class="list-group-item clearfix" *ngFor="let product of products">
+    <a href="#" >
         <div class="row card-deck">
-            <div class="col-4">
+            <div class="col-3" *ngFor="let product of list$ | async">
                 <div class="card" style="width:400px">
                     <img class="card-img-top" src="{{ product.picture }}" alt="Card image">
                     <div class="card-body">
