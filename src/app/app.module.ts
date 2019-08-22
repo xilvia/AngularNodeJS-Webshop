@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './page/index/index.component';
 import { OrderAdminComponent } from './page/order-admin/order-admin.component';
+import { ProductAdminComponent } from './page/product-admin/product-admin.component';
+import { EditProductAdminComponent } from './page/edit-product-admin/edit-product-admin.component';
+import { AddProductAdminComponent } from './page/add-product-admin/add-product-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    OrderAdminComponent
+    OrderAdminComponent,
+    ProductAdminComponent,
+    EditProductAdminComponent,
+    AddProductAdminComponent
   ],
-  imports: [
+  imports: [FormsModule,
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

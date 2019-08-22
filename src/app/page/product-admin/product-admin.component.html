@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 offset-1">
+        <h1 class="text-center">{{ title }}</h1>
+        </div>
+      </div>
+        <div class="row">
+                <table class="table table-striped ">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>name</th>
+                                <th>type</th>
+                                <th>picture</th>
+                                <th>description</th>
+                                <th>color</th>
+                                <th><button routerLink ="/add/product">Add</button></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let product of list$ | async">
+                                <td>{{product.id}}</td>
+                                <td>{{product.name}}</td>
+                                <td>{{product.type}}</td>
+                                <td>{{product.picture}}</td>
+                                <td>{{product.description}}</td>
+                                <td>{{product.color}}</td>
+                                <td><button routerLink= "/admin/products/{{product.id}}" class="btn btn-primary">edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+              
+                </div>
+               </div> 
+        
