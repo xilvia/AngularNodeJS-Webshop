@@ -8,8 +8,8 @@ import { ProductDetailsComponent } from './page/product-details/product-details.
 
 const routes: Routes = [
   {path: '', component: IndexComponent},
-  {path: 'products', component: ProductListComponent}, //ezzel lehet baj
-  {path: 'products/{{products[k].id}}', component: ProductDetailsComponent}, //ezzel lehet baj
+  {path: 'products', component: ProductListComponent}, //ezzel lehet baj. És majd innen ágazuk le az id-s termékoldalakra
+  {path: 'products/{{products[k].id}}', component: ProductDetailsComponent}, //ezzel lehet baj. így szoktuk ezt? :)
   {path: 'admin/order', component: OrderAdminComponent},
   {path: '**', component: IndexComponent}
 ];
