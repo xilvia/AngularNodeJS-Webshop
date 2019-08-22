@@ -6,7 +6,7 @@ import { OrderAdminComponent } from './page/order-admin/order-admin.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
-  { path: 'admin/order', component: OrderAdminComponent },
+  { path: 'order-admin', component: OrderAdminComponent },
   { path: '**', component: IndexComponent }
 ];
 
