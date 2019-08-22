@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './page/index/index.component';
 import { OrderAdminComponent } from './page/order-admin/order-admin.component';
 import { NavComponent } from './nav/nav.component';
+import { ProductListComponent } from './page/product-list/product-list.component';
+import { ProductDetailsComponent } from './page/product-details/product-details.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     OrderAdminComponent,
-    NavComponent
+    NavComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
