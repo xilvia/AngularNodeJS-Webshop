@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 import { ProductDetailsComponent } from './page/product-details/product-details.component';
 import { SliderComponent } from './slider/slider.component';
+import { BadurlComponent } from './page/badurl/badurl.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SliderComponent } from './slider/slider.component';
     NavComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    SliderComponent
+    SliderComponent,
+    BadurlComponent
   ],
   imports: [
     BrowserModule,

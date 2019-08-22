@@ -8,12 +8,23 @@ module.exports = class GetHandler {
     const ordersDB = new DB(reqParams[1]);
     const id = reqParams[2] || 0;
     ordersDB.find(id).then(
-      data => res.end( JSON.stringify(data) ),
+      data => res.end(JSON.stringify(data)),
       err => {
         res.statusCode = 404;
         res.end(JSON.stringify(err));
       }
     );
 
+    const productsDB = new DB(reqParams[1]);
+    const productId = reqParams[2] || 0;
+    productsDB.find(productId).then(
+      data => res.end(JSON.stringify(data)),
+      err => {
+        res.statusCode = 404;
+        res.end(JSON.stringify(err));
+      }
+    )
   }
-};
+}
+
+
