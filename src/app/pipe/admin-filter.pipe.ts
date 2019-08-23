@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AdminFilterPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(baseArray: any=[], phrase:string="") {
+
+    return baseArray.filter( product => {return JSON.stringify(product).toLowerCase().indexOf(phrase.toLowerCase()) > -1})
   }
 
 }

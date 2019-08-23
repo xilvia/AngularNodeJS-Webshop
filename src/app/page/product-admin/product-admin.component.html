@@ -25,7 +25,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let product of list$ | async ">
+                                <tr *ngFor="let product of list$ | async | adminFilter:filterPhrase:counter | deleteFilter:removedId"> <!--MIért kell az adminFilterre a counter?-->
                                     <td>{{product.id}}</td>
                                     <td>{{product.name}}</td>
                                     <td>{{product.type}}</td>

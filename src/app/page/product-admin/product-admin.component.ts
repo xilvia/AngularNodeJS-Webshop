@@ -10,9 +10,9 @@ import { Observable } from 'rxjs';
 })
 export class ProductAdminComponent implements OnInit {
   title:string ="Product DataBase";
-  counter:number;
-  filterPhrase:string="";
-
+  filterPhrase:string
+  removedId:number[]=[];
+  counter:number=0;
   list$: Observable<Product[]>= this.productAdService.getAll();
   constructor( private productAdService: ProductAdminService) {
   
@@ -20,13 +20,15 @@ export class ProductAdminComponent implements OnInit {
     removeProduct(id){
       this.productAdService.remove(id).forEach((data)=>{
         console.log(data);
+      this.removedId.push(id);
+      console.log(this.removedId);
       this.counter++;
       })
     
     
     }
 ngOnInit(){
-
+  this.filterPhrase="";
 }
    }
 

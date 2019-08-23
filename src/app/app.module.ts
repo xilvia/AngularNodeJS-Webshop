@@ -11,6 +11,7 @@ import { ProductAdminComponent } from './page/product-admin/product-admin.compon
 import { EditProductAdminComponent } from './page/edit-product-admin/edit-product-admin.component';
 import { AddProductAdminComponent } from './page/add-product-admin/add-product-admin.component';
 import { AdminFilterPipe } from './pipe/admin-filter.pipe';
+import { DeleteFilterPipe } from './pipe/delete-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminFilterPipe } from './pipe/admin-filter.pipe';
     ProductAdminComponent,
     EditProductAdminComponent,
     AddProductAdminComponent,
-    AdminFilterPipe
+    AdminFilterPipe,
+    DeleteFilterPipe
   ],
   imports: [FormsModule,
     RouterModule,
