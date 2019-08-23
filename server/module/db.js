@@ -20,7 +20,10 @@ module.exports = class DB {
   add(newData) {
     return new Promise((resolve, reject) => {
       this.getJsonArray().then((dataArray) => {
-        const newId = dataArray[dataArray.length - 1].id + 1 || 1;
+        let newId = 1;
+        if (dataArray.length > 0) {
+          newId = dataArray[dataArray.length - 1].id + 1;
+        }
         newData.id = newId;
         dataArray.push(newData);
         fs.writeFile(this.jsonFilePath, JSON.stringify(dataArray, null, 4), 'utf8', (err) => {
