@@ -21,6 +21,6 @@ export class OrderService {
     //   observer.next(this.orders);
     // });
 
-    // amíg nem megy innen http-kérés, addig mock-adatokkal dolgozunk
+    // amíg nem megy innen http-kérés, addig mock-adatokkal dolgozun
   }
 }
