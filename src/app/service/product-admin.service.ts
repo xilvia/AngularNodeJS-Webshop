@@ -17,6 +17,10 @@ export class ProductAdminService {
     console.log(id);
     return this.http.get(`${this.apiUrl}/${id}`)
 }
+remove(id:number):Observable<Product>{
+
+  return this.http.delete<Product>(`${this.apiUrl}/${id}`)
+}
 updateProduct(product:any): Observable<any>{
   return this.http.put(`${this.apiUrl}/${product.id}`, product, {responseType: 'text'})
 }

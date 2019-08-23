@@ -88,14 +88,5 @@
         "picture": "https://img.kytary.com/eshop_hu/stredni_v4/na/636710511213000000/9eb24561/64437688/fender-squier-mini-stratocaster-lrl-pk.jpg",
         "description": "Háromnegyedes méretével ideális társ a gyermekek zenei kalandozásához.",
         "color": "Pink"
-    },
-    {
-        "id": 11,
-        "name": "Fender",
-        "type": "t340",
-        "insdate": "",
-        "picture": "https://img.kytary.com/eshop_hu/stredni_v4/na/636892917323900000/b6fe1606/64614406/jay-turser-jt-ltcustomdlx-cs-m-u.jpg",
-        "description": "menő gitár",
-        "color": "sárga"
     }
 ]

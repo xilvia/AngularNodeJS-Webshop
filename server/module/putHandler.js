@@ -10,7 +10,7 @@ module.exports = class PutHandler {
     });
     req.on('end', () => {
       db.putData(JSON.parse(allData), reqParams[2]);
-      res.end("hello");
+      res.end(allData);
     });
   }
 };
