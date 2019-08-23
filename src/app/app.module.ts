@@ -12,6 +12,8 @@ import { EditProductAdminComponent } from './page/edit-product-admin/edit-produc
 import { AddProductAdminComponent } from './page/add-product-admin/add-product-admin.component';
 import { AdminFilterPipe } from './pipe/admin-filter.pipe';
 import { DeleteFilterPipe } from './pipe/delete-filter.pipe';
+import { AddOrderAdminComponent } from './page/add-order-admin/add-order-admin.component';
+import { EditOrderAdminComponent } from './page/edit-order-admin/edit-order-admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DeleteFilterPipe } from './pipe/delete-filter.pipe';
     EditProductAdminComponent,
     AddProductAdminComponent,
     AdminFilterPipe,
-    DeleteFilterPipe
+    DeleteFilterPipe,
+    AddOrderAdminComponent,
+    EditOrderAdminComponent
   ],
   imports: [FormsModule,
     RouterModule,

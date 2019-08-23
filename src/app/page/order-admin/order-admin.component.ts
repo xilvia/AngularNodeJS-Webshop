@@ -9,24 +9,25 @@ import { Order } from 'src/app/model/order';
   styleUrls: ['./order-admin.component.css']
 })
 export class OrderAdminComponent implements OnInit {
-
-  list: Order[] = [];
-  list$: Observable<any> = this.orderService.getAll();
-  //$ - ez nem adat, hanem egy observable, ami az adatot körülveszi
-  constructor(
-    private orderService: OrderService
-  ) { }
-
-  ngOnInit() {
-    // this.orderService.getAll().subscribe(
-    //   orders => this.list = orders, // ez a sor minden next-nél lefut a subscribe első paramétereként
-    //   err => console.error(err)
-    // a getAll observable-t ad vissza, amire itt iratkozom fel
-    // a subscribe-ban írom le, mit csináljunk az adattal, ami visszajön
-    // --> amit a subscribe visszaad, a this.list, ez lesz maga az orders tömb, egyenlővé teszem az osztállyal
-    //) - ami itt le volt írva, kiváltható ezzel: list$: Observable<any> = this.orderService.getAll(); 
-    // a html-ben: {{ list$ | async | json }} ---> az egész a subscribe-ot váltja ki
+  title: string = "Order DataBase";
+  filterPhrase: string
+  removedId: number[] = [];
+  counter: number = 0;
+  list$: Observable<Order[]> = this.orderService.getAll();
+  constructor(private orderService: OrderService) {
 
   }
+  removeOrder(id) {
+    this.orderService.remove(id).forEach((data) => {
+      console.log(data);
+      this.removedId.push(id);
+      console.log(this.removedId);
+      this.counter++;
+    })
 
+
+  }
+  ngOnInit() {
+    this.filterPhrase = "";
+  }
 }

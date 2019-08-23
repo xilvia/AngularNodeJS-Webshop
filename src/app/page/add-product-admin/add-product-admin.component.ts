@@ -10,16 +10,18 @@ import { Router } from '@angular/router';
 })
 export class AddProductAdminComponent implements OnInit {
 
-product: Product = new Product();
+  product: Product = new Product();
   constructor(private adminProductSer: ProductAdminService, private router: Router) { }
 
   ngOnInit() {
   }
-onAdd(event:Event){
-  event.preventDefault();
-  this.adminProductSer.addUser(this.product).forEach(
-    product=> {console.log(product);
-   this.router.navigateByUrl('/admin/products').then(reseolve => console.log("sikeres oldalváltás") )
+  onAdd(event: Event) {
+    event.preventDefault();
+    this.adminProductSer.addUser(this.product).forEach(
+      product => {
+        console.log(product);
+        this.router.navigateByUrl('/admin/products').then(reseolve => console.log("sikeres oldalváltás"))
+      }
+    )
   }
-  )}
 }
