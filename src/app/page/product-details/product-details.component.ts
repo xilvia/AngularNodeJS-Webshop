@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Product } from 'src/app/model/product';
-import { ProductService } from 'src/app/service/product.service';
-import { OrderService } from 'src/app/service/order.service';
-import { Order } from 'src/app/model/order';
+import { Product } from '../../model/product';
+import { ProductService } from '../../service/product.service';
+import { OrderService } from '../../service/order.service';
+import { Order } from '../../model/order';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { Order } from 'src/app/model/order';
   templateUrl: './products-details.component.html',
   styleUrls: ['./products-details.component.css']
 })
-export class ProductsDetailsComponent implements OnInit {
+export class ProductDetailsComponent implements OnInit {
 
   order: Order = {
     id: 0,

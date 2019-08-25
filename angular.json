@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            // cheatsheet added
             "optimization": false,
             "outputHashing": "none",
             "sourceMap": false,
