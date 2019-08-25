@@ -31,7 +31,7 @@ A csapatok 4 fősek, 2 - 2 ember dolgozik az admin és a vásárlói felületen.
 ### Munkamegosztás
 * 2 ember admin felület, 2 ember vásárlói felület.
 * Vásárlói felület: 1 ember termék litázás NodeJs + Angular, 1 ember egyedi 
-termék oldal + rendelés,  NodeJS + Angular
+termék oldal + rendelés,  NodeJS + Angular.
 * Admin felület: 1 ember orders listázás + szerkesztés, 1 ember products listázás 
 + szerkesztés
 * Legalább 10 termék és 10 rendelés legyen.  
