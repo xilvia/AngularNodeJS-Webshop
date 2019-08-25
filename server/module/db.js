@@ -7,7 +7,7 @@ module.exports = class DB {
     // konstruktor megkapja az adott json fájl nevét, pl. product
     constructor(jsonFileName) {
         // beállítjuk a json fájlokat tartalmazó mappa elérési útját
-        this.jsonDirectory = path.join('./../json');
+        this.jsonDirectory = path.join(__dirname, '../../json');
         // beállítjuk a kezelendő json fájl teljes elérési útját
         this.jsonFilePath = path.join(
             this.jsonDirectory,
