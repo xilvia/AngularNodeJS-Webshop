@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IndexComponent } from './page/index/index.component';
 import { OrderAdminComponent } from './page/order-admin/order-admin.component';
-import { ProductDetailsComponent } from './pate/product-details/product-details.component';
-import { NavComponent } from './app/nav/nav.component';
+import { ProductsDetailsComponent } from './page/product-details/product-details.component';
+import { NavComponent } from '../app/nav/nav.component';
 import { ProductListComponent } from './page/product-list/product-list.component';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { ProductListComponent } from './page/product-list/product-list.component
     AppComponent,
     IndexComponent,
     OrderAdminComponent,
-    ProductDetailsComponent,
+    ProductsDetailsComponent,
     NavComponent,
     ProductListComponent
   ],
