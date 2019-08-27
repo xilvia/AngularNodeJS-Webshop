@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderService } from '../../service/order.service';
-import { Order } from '../../model/order';
 import { Observable } from 'rxjs';
+import { Order } from 'src/app/model/order';
+import { OrderService } from 'src/app/service/order.service';
 
 @Component({
   selector: 'app-order-admin',
@@ -14,14 +14,10 @@ export class OrderAdminComponent implements OnInit {
   list$: Observable<any> = this.orderService.getAll();
 
   constructor(
-    private orderService: OrderService
+    private orderService: OrderService,
   ) { }
 
   ngOnInit() {
-    /* this.orderService.getAll().subscribe(
-      orders => this.list = orders,
-      err => console.error(err)
-    ); */
   }
 
 }

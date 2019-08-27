@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../service/product.service';
-import { Product } from '../../model/product';
+import { ProductService } from 'src/app/service/product.service';
+import { Product } from 'src/app/model/product';
 import { Observable } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
+import { OrderService } from 'src/app/service/order.service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,7 +16,10 @@ export class ProductListComponent implements OnInit {
   list$: Observable<any> = this.productService.getAll();
 
   constructor(
-    private productService: ProductService
+    private productService: ProductService,
+    private ar: ActivatedRoute,
+    private router: Router,
+    private orderService: OrderService
   ) { }
 
   ngOnInit() {

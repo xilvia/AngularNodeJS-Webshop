@@ -1,7 +1,3 @@
-<!-- <pre>
-    {{ list$ | async | json }}
-  </pre> -->
-
 <div class="container">
     <h1 class="text-center">Guitars of your choice</h1>
     <br>
@@ -15,7 +11,7 @@
                         <h6>{{ product.type}}</h6>
                         <p>{{ product.color}}</p>
                         <p>{{ product.description}}</p>
-                        <a href="#" class="btn btn-warning">Check it out!</a>  <!--Ide kell majd bekötni az egyes aloldalak linkjét-->
+                        <a href="#" class="btn btn-warning" [routerLink]="['/products', product.id]">Check it out!</a>  <!--Ide kell majd bekötni az egyes aloldalak linkjét-->
                     </div>
                 </div>
             </div>
