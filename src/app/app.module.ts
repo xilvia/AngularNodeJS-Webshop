@@ -15,6 +15,10 @@ import { DeleteFilterPipe } from './pipe/delete-filter.pipe';
 import { AdminSorterPipe } from './pipe/admin-sorter.pipe';
 import { EditOrderAdminComponent } from './page/edit-order-admin/edit-order-admin.component';
 import { AddOrderAdminComponent } from './page/add-order-admin/add-order-admin.component';
+import { NavComponent } from './nav/nav.component';
+import { BadurlComponent } from './page/badurl/badurl.component';
+import { ProductListComponent } from './page/product-list/product-list.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { AddOrderAdminComponent } from './page/add-order-admin/add-order-admin.c
     DeleteFilterPipe,
     AdminSorterPipe,
     AddOrderAdminComponent,
-    EditOrderAdminComponent
+    EditOrderAdminComponent,
+    NavComponent,
+    BadurlComponent,
+    ProductListComponent,
+    SliderComponent
   ],
   imports: [FormsModule,
     RouterModule,

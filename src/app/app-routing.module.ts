@@ -7,17 +7,20 @@ import { EditProductAdminComponent } from './page/edit-product-admin/edit-produc
 import { AddProductAdminComponent } from './page/add-product-admin/add-product-admin.component';
 import { EditOrderAdminComponent } from './page/edit-order-admin/edit-order-admin.component';
 import { AddOrderAdminComponent } from './page/add-order-admin/add-order-admin.component';
+import { ProductListComponent } from './page/product-list/product-list.component'; //ez oké
+import { BadurlComponent } from './page/badurl/badurl.component';
 
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
+  { path: 'products', component: ProductListComponent },
   { path: 'admin/products', component: ProductAdminComponent },
   { path: 'admin/products/:id', component: EditProductAdminComponent },
   { path: 'add/product', component: AddProductAdminComponent },
   { path: 'admin/orders', component: OrderAdminComponent },
   { path: 'admin/orders/:id', component: EditOrderAdminComponent },
   { path: 'add/order', component: AddOrderAdminComponent },
-  { path: '**', component: IndexComponent }
+  { path: '**', component: BadurlComponent }
 ];
 
 @NgModule({

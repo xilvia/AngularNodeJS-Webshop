@@ -5,15 +5,11 @@
     </div>
     <div class="form-group col-12">
       <label for="">Search</label>
-      <input type="text"
-             [(ngModel)]="filterPhrase"
-             class="form-control"
-             placeholder="Search..."
-             aria-describedby="helpId">
+      <input type="text" [(ngModel)]="filterPhrase" class="form-control" placeholder="Search..."
+        aria-describedby="helpId">
 
     </div>
-    <div class="col-12"><button class="btn btn-success btn-block"
-              routerLink="/add/order">Add</button></div>
+    <div class="col-12"><button class="btn btn-success btn-block" routerLink="/add/order">Add</button></div>
   </div>
   <div class="row">
     <div class="col-12">
@@ -31,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let order of list$ | async | adminFilter:filterPhrase | deleteFilter:removedId">
+          <tr *ngFor="let order of list$ | async | adminFilter:filterPhrase:counter | deleteFilter:removedId">
             <!--MIért kell az adminFilterre a counter?-->
             <td>{{order.id}}</td>
             <td>{{order.userName}}</td>
@@ -40,10 +36,8 @@
             <td>{{order.insdate}}</td>
             <td>{{order.product}}</td>
             <td>{{order.quantity}}</td>
-            <td><button routerLink="/admin/orders/{{order.id}}"
-                      class="btn btn-primary">edit</button></td>
-            <td><button (click)="removeOrder(order.id)"
-                      class="btn btn-warning">delete</button></td>
+            <td><button routerLink="/admin/orders/{{order.id}}" class="btn btn-primary">edit</button></td>
+            <td><button (click)="removeOrder(order.id)" class="btn btn-warning">delete</button></td>
           </tr>
         </tbody>
       </table>
