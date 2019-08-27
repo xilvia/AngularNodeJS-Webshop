@@ -10,10 +10,10 @@ import { BadurlComponent } from './page/badurl/badurl.component';
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'order-admin', component: OrderAdminComponent },
-  { path: 'products', component: ProductListComponent},
-  { path: 'product-details', component: ProductDetailsComponent},
-  { path: '**', component: IndexComponent }
-  {path: '**', component: BadurlComponent}, //ez okés
+  { path: 'products', component: ProductListComponent },
+  { path: 'product-details', component: ProductDetailsComponent },
+  { path: '**', component: IndexComponent },
+  { path: '**', component: BadurlComponent }, //ez okés
 ];
 
 @NgModule({
